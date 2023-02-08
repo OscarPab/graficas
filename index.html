@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graficastitle>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+
+    <h1>graficas</h1>
+    <div id="line-chart"></div>
+    <div id="bar-chart"></div>
+    <div id="histogram"></div>
+    <div id="heatmap"></div>
+
+    <script>
+        // Datos para la gráfica de líneas
+        var lineData = [{ x: [1, 2, 3, 4, 5], y: [1, 2, 4, 8, 16], type: "line" }
+        ];
+
+        // Datos para la gráfica de barras
+        var barData = [{ x: [1, 2, 3, 4, 5], y: [1, 2, 4, 8, 16], type: "bar" }
+        ];
+
+        // Datos para el histograma
+        var histData = [{ x: [1, 2, 2, 3, 4, 4, 4, 5], type: "histogram" }
+        ];
+
+        // Datos para el mapa de calor
+        var heatData = [{
+            x: [1, 2, 3, 4, 5],
+            y: [1, 2, 3, 4, 5],
+            z: [[1, 2, 3, 4, 5], [5, 4, 3, 2, 1], [1, 2, 3, 4, 5], [5, 4, 3, 2, 1], [1, 2, 3, 4, 5]],
+            type: "heatmap"
+        }
+        ];
+
+        // Crear gráfica de líneas
+        Plotly.newPlot("line-chart", lineData);
+
+        // Crear gráfica de barras
+        Plotly.newPlot("bar-chart", barData);
+
+        // Crear histograma
+        Plotly.newPlot("histogram", histData);
+
+        // Crear mapa de calor
+        Plotly.newPlot("heatmap", heatData);
+
+    </script>
+
+
+</body>
+
+</html>
